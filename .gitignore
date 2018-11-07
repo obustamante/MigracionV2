@@ -2,6 +2,12 @@
 # Created by https://www.gitignore.io/api/git,osx,java,macos,gradle,android,windows,eclipse,netbeans,intellij,androidstudio
 # Edit at https://www.gitignore.io/?templates=git,osx,java,macos,gradle,android,windows,eclipse,netbeans,intellij,androidstudio
 
+### Dropbox ###
+# Dropbox settings and caches
+.dropbox
+.dropbox.attr
+.dropbox.cache
+
 ### Android ###
 # Built application files
 *.apk
