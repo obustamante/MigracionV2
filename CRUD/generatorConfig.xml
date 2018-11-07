@@ -5,7 +5,7 @@
 
 <generatorConfiguration>
   <!-- Ubicación del JAR JDBC del gestor de Base de datos a usar, en este caso postgresql  -->
-  <classPathEntry location="postgresql-42.1.1.jre6.jar" />
+  <classPathEntry location="../libs/postgresql-42.2.1.jre6.jar" />
 
   <context id="InteraccionesTables" targetRuntime="MyBatis3">
 
