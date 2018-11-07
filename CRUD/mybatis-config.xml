@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="url" value="jdbc:postgresql://127.0.0.1:5432/test001"/>
+                <property name="username" value="interacciones"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/componentes.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/componentesactivos.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/drugbank.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/efectos.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/estados.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/fabric_import.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/interaccionescomponentes.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/moleculas.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/moleculas_targets.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/presentaciones.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/productos_moleculas.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/productos_presentaciones.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/registro_fabric.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/registrossanitarios.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/targets.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/unidadesmedida.xml"/>
+        <mapper resource="co/edu/usc/vision/interacciones/api/dao/xml/vias.xml"/>
+    </mappers>
+</configuration>

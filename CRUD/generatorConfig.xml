@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <!-- Ubicación del JAR JDBC del gestor de Base de datos a usar, en este caso postgresql  -->
+  <classPathEntry location="postgresql-42.1.1.jre6.jar" />
+
+  <context id="InteraccionesTables" targetRuntime="MyBatis3">
+
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <!--  Parámetros de conexión a la bd -->
+        <jdbcConnection driverClass="org.postgresql.Driver"
+            connectionURL="jdbc:postgresql://127.0.0.1:5432/interacciones"
+            userId="postgres"
+            password="123456">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+          <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="co.edu.usc.vision.interacciones.dao.model" targetProject="src">
+          <property name="enableSubPackages" value="true" />
+          <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="co.edu.usc.vision.interacciones.dao.xml" targetProject="src">
+          <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="co.edu.usc.vision.interacciones.dao.model" targetProject="src">
+          <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+          <!-- Generamos el código fuente de todas las tablas -->
+          <table schema="usc" tableName="componentes"></table>
+          <table schema="usc" tableName="componentesactivos"></table>
+          <table schema="usc" tableName="drugbank"></table>
+          <table schema="usc" tableName="drugbankid"></table>
+          <table schema="usc" tableName="efectos"></table>
+          <table schema="usc" tableName="estados"></table>
+          <table schema="usc" tableName="fabric_import"></table>
+          <table schema="usc" tableName="interaccionescomponentes"></table>
+          <table schema="usc" tableName="moleculas"></table>
+          <table schema="usc" tableName="moleculas_targets"></table>
+          <table schema="usc" tableName="presentaciones"></table>
+          <table schema="usc" tableName="productos_moleculas"></table>
+          <table schema="usc" tableName="productos_presentaciones"></table>
+          <table schema="usc" tableName="registro_fabric"></table>
+          <table schema="usc" tableName="registrossanitarios"></table>
+          <table schema="usc" tableName="targets"></table>
+          <table schema="usc" tableName="unidadesmedida"></table>
+          <table schema="usc" tableName="vias"></table>
+
+  </context>
+</generatorConfiguration>
